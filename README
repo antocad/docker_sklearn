@@ -1,0 +1,8 @@
+1st Step: Download repository
+-> git clone https://github.com/antocad/docker_sklearn
+
+2nd Step: Create docker image
+-> docker build -t test-mlflow-docker -f Dockerfile .
+
+3rd Step: 
+-> mlflow run test-mlflow-docker -P run='runs:/09f121adf60f421fa4bc6d4c400c9971/model'
