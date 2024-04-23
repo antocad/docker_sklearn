@@ -4,7 +4,7 @@ COPY ./ ./
 
 # Setting up the conda environment
 RUN conda env create -f conda.yaml
-ENV PATH /opt/conda/envs/dockerimg/bin:$PATH
-ENV CONDA_DEFAULT_ENV dockerimg
-RUN /bin/bash -c "source activate dockerimg"
-RUN echo "source activate dockerimg" > ~/.bashrc
+ENV PATH /opt/conda/envs/mainenv/bin:$PATH
+ENV CONDA_DEFAULT_ENV mainenv
+RUN /bin/bash -c "source activate mainenv"
+RUN echo "source activate mainenv" > ~/.bashrc

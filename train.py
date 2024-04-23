@@ -19,7 +19,7 @@ from sklearn.preprocessing import MinMaxScaler
 def train(tracking_uri):
     mlflow.set_tracking_uri(tracking_uri)
     # We create the remote experiment (on the server, if it doesn't already exist)
-    experiment = mlflow.set_experiment("test-sklearn-without-docker")
+    experiment = mlflow.set_experiment("test-sklearn-with-docker")
     # We create a run locally with the same experiment id as the one on the server
     client = mlflow.tracking.MlflowClient()
     run = client.create_run(experiment.experiment_id)
